@@ -21,6 +21,7 @@ services:
       - app_network
   client:
     build: ./client
+    container_name: client
     ports:
       - "3000:80"
     environment:
