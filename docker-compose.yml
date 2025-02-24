@@ -1,0 +1,36 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app_network
+  server:
+    build: ./server
+    container_name: server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/notes_db
+    networks:
+      - app_network
+  client:
+    build: ./client
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_URL=http://server:5000
+      - VITE_URL_API=http://server:5000/api
+    depends_on:
+      - server
+    networks:
+      - app_network
+volumes:
+  mongo-data:
+networks:
+  app_network:
