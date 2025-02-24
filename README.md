@@ -35,9 +35,8 @@ VITE_URL_API=http://localhost:5000/api
 ```
 ### Execução
 - **Com Docker**
-Verifique se o [Docker](https://www.docker.com/) está instalado e sendo executado na sua máquina
+Verifique se o Docker está sendo executado na sua máquina
 ```bash
-docker --version
 docker ps
 ```
 Na raiz do projeto execute
