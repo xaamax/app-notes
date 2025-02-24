@@ -4,7 +4,7 @@ Aplicação desenvolvida para o gerenciamento de notas, dividida em duas partes 
 - **Client**: Aplicação frontend utilizando Vue.js
 
 ## Pré-Requisitos
-- **Node.js**: Versão 18 ou superior. [Download](https://nodejs.org/).
+- **Node.js**: Versão 22 ou superior. [Download](https://nodejs.org/).
 - **MongoDB**: Banco de dados utilizado no projeto. [Download](https://www.mongodb.com/).
 - **Docker** (opcional): Para rodar o projeto em um contêiner. [Download](https://www.docker.com/).
 
